@@ -5,6 +5,8 @@ Projeto desenvolvido para o evento Kenzie Amazônia.
 ## Ferramentas
 
 1. [Plataforma](https://participe-amazonia.kenzie.com.br/desafios)
+2. [Instalação do VS Code no Windows](https://kenzie.com.br/blog/instalacao-vs-code-windows/)
+3. [Como utilizar o codepen e o VSCode](https://kenzie-academy-brasil.github.io/ferramentas/)
 
 ## Checkpoints aulas
 
