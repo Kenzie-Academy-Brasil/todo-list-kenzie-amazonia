@@ -41,7 +41,7 @@ Projeto desenvolvido para o evento Kenzie Amazônia.
 
 ## Layout
 
-- [Kenzie Food](./assets/img/layout.png)
+- [Lista de Tarefas - Kenzie Amazônia](./assets/img/layout.png)
 
 ## Referências
 
