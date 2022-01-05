@@ -1,0 +1,93 @@
+main{
+    display: flex;
+    justify-content: center;
+}
+
+/* APP LISTA DE TAREFAS */
+section{
+    background-color: #2585DA;
+    width: 500px;
+    color: #fff;
+    margin-top: 70px;
+    font-family: 'Quicksand', sans-serif;
+    box-shadow: -20px -20px 0px 0px rgba(100, 100, 100, 0.1);
+}
+
+/* CABEÇALHO DO APP */
+header{
+    padding: 50px 60px 0;
+}
+
+header h1{
+    font-size: 42px;
+}
+header p{
+    font-size: 18px;
+    border-bottom: 1px solid #fff;
+    padding: 10px 0;
+}
+
+/* ÁREA DE FORMULÁRIO/ADICIONA NOVA TAREFA */
+.formularioTarefa{
+    padding: 40px 60px;
+    display: flex;
+}
+.formularioTarefa label{
+    display: none;
+}
+.formularioTarefa input{
+    width: 350px;
+    padding: 20px 20px;
+    border: none;
+    font-family: 'Quicksand', sans-serif;
+}
+.formularioTarefa button{
+    width: 120px;
+    margin-left: 10px;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    cursor: pointer;
+    font-family: 'Quicksand', sans-serif;
+}
+.formularioTarefa button:hover {
+    background-color: #fff;
+    color: #2585DA;
+}
+
+/* ÁREA DE LISTA DE TAREFAS */
+.listaTarefas{}
+.listaTarefas ul{}
+.listaTarefas li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(255 255 255 / 37%);
+    padding: 20px 60px;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+.listaTarefas h2{}
+.listaTarefas div{}
+.listaTarefas button{
+    font-family: 'Quicksand', sans-serif;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.listaTarefas .botaoFinalizarTarefa{
+    background-image: url(../img/square.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 22px;
+    height: 22px;
+}
+
+/* MODO NOTURNO */
+.modoNoturno{
+    padding: 15px 60px 40px;
+}
+.modoNoturno label{}
+.modoNoturno input{}

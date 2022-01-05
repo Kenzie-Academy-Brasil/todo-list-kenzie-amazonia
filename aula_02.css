@@ -1,0 +1,73 @@
+/* CSS => Cascading StyleSheet(folha de estilo em cascata) */
+
+/* 
+
+seletor {
+    propriedade: valor da propriedade; => declaração
+    cor: vermelho
+} => regra CSS
+
+*/
+
+/*
+Tipos de seletores
+
+1. Seletor por elemento/por tag
+*/
+
+body {
+
+}
+
+/* 2. Seletor por classe */
+
+.meuCabecalho {
+    /* background-color: royalblue; */
+}
+
+/* 3. Seletor por ID */
+
+#tituloSobreHudson {
+    
+}
+
+/* ------- */
+
+h2 {
+    color: red;
+    font-size: 30px;
+    font-family: 'Arial', sans-serif;
+    background-color: royalblue;
+    display: inline-block;
+    width: 500px;
+}
+
+header {
+    /* width: 700px; */
+    /* height: 400px; */
+}
+
+a {
+    background-color: red;
+    display: block;
+}
+
+/* Exemplo flexbox */
+
+.exemploFlexbox{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    height: 300px;
+    background-color: silver;
+}
+.div1{
+    width: 200px;
+    height: 200px;
+    background-color: tomato;
+}
+.div2{
+    width: 200px;
+    height: 200px;
+    background-color: royalblue;
+}
