@@ -1,231 +1,99 @@
-//JAVASCRIPT
+/*
+Principais objetivos
 
-//console.log("Meu nome é Hudson")
+1. Criar uma nova tarefa
+ a. Capturar conteúdo adicionado pelo usuário -
+ b. Criar nova tarefa -
+ c. Adicionar nova tarefa na página -
+ Obs: esses passos vão ocorrer a partir do clique no botão
 
-//******************/
-//VARIAVEIS         /
-//*****************/
-//LET
-//let nome = "Hudson Carolino"
+2. Marcar uma tarefa como concluída
 
-//nome = "Maria"
+3. Remover uma tarefa
+ a. Capturar todas as tarefas
+ b. Identificar a tarefa clicada
+ c. Remover a tarefa
 
+*/
 
+const buttonAddTarefa = document.querySelector('.formularioTarefa button');
+const campoAddTarefa = document.getElementById('inputadicionarTarefa');
 
-//CONST
-const cidade = "São Paulo"
+const listaTarefas = document.querySelector('ul');
 
+buttonAddTarefa.addEventListener('click', adicionarNovaTarefa);
 
+function adicionarNovaTarefa() {
+    const conteudoCampo = campoAddTarefa.value;
 
-//******************/
-//TIPOS DE DADOS    /
-//*****************/
+    const tarefa = document.createElement('li');
+    const h2 = document.createElement('h2');
+    const div = document.createElement('div');
+    const buttonFinalizarTarefa = document.createElement('button');
+    const buttonRemoverTarefa = document.createElement('button');
+    const img = document.createElement('img');
 
-//INTEIRO/NUMBER
-// let numero1 = 25
-// let numero2 = 25
-// let resultado  = numero1 + numero2
+    h2.innerText = conteudoCampo;
 
-// //STRING
-// let texto  = "Esse tipo de dado é uma string"
+    buttonFinalizarTarefa.classList.add('botaoFinalizarTarefa');
 
-// //BOOLEAN
-// let verdadeiro  = true
-// let falso  = false 
+    buttonFinalizarTarefa.addEventListener('click', finalizarTarefa);
+    buttonRemoverTarefa.addEventListener('click', removerTarefa);
 
-//******************/
-//OPERADORES BÁSICOS/
-//*****************/
+    img.src = './assets/img/trash.svg';
+    img.alt = 'Imagem botão remover tarefa';
 
-//SOMA      +
-//SUBTRAÇÃO -
-//DIVISÃO  /
-//MULTIPLICAÇÃO *
-//MAIS IGUAL  +=
-//MENOS IGUAL -=
+    buttonRemoverTarefa.appendChild(img);
 
-// let numero = 4
-// console.log(numero)
+    div.appendChild(buttonFinalizarTarefa);
+    div.appendChild(buttonRemoverTarefa);
 
-// numero -= 1
-// console.log(numero)
+    tarefa.appendChild(h2);
+    tarefa.appendChild(div);
 
+    // const li = `
+    // <h2>${conteudoCampo}</h2>
+    // <div>
+    //     <button class="botaoFinalizarTarefa"></button>
+    //     <button>
+    //         <img src="./assets/img/trash.svg" alt="Imagem botão remover tarefa">
+    //     </button>
+    // </div>`;
 
-//************************/
-//ESTRUTURAS CONDICIONAIS/
-//************************/
+    // tarefa.innerHTML = li;
+    listaTarefas.appendChild(tarefa);
 
-//OPERADORES DE COMPARAÇÃO/RELACIONAIS
-
-//VERIFICA IGUALDADE
-// 10 == 10 true
-
-//VERIFICA TAMBÉM O TIPO DE DADO
-// 10 === 10 true
-
-//LÓGICOS
-
-//MAIOR
-// 10>1 TRUE
-//MENOR 
-// 10<1 FALSE
-
-//MAIOR IGUAL 
-// 20 >= 10 TRUE 
-//MENOR IGUAL
-// 20 <= 10 FALSE
-//DIFERENTE 
-// "Hudson" != "hudson" TRUE 
-
-//************************/
-//CONDICIONAIS IF E ELSE  /
-//************************/
-// let idade = 17
-// let nome  = "Diego"
-
-//EE
-// if(idade >= 18 && nome == "Diego"){
-
-//     console.log("Atingiu a maior idade")
-//     console.log("E meu nome é "+ nome)
-
-// }else{
-
-//     console.log("Ainda não atingiu a maior idade")
-//     console.log("E meu nome está incorreto")
-// }
-//OU
-
-// let idade = 17
-// let nome  = "Hudson"
-
-// if(idade >= 18 && (nome == "Diego" || nome == "Hudson")){
-    
-//     console.log("Atingiu a maior idade")
-//     console.log("E meu nome é "+ nome)
-
-// }else{
-
-//     console.log("Ainda não atingiu a maior idade")
-//     console.log("E meu nome está incorreto")
-// }
-
-
-//************************/
-//FUNÇÕES                 /
-//************************/
-
-//DECLARANDO FUNÇÃO
-function digaOlaMundo(){
-
-    console.log("Olá mundo")
-
+    // const listaBotoesRemover = document.querySelectorAll('.botaoFinalizarTarefa ~ button');
+    // adicionarEventHandler(listaBotoesRemover);
 }
 
-//CHAMANDO PARA EXECUTAR A TAREFA
-//digaOlaMundo()
+// function adicionarEventHandler(listaBotoesRemover){
+//     for(let i = 0; i < listaBotoesRemover.length; i++){
+//         const buttonRemover = listaBotoesRemover[i];
 
-// function soma(parm1, parm2){
-
-//     let resultado  = parm1 + parm2
-//     console.log(resultado)
+//         buttonRemover.addEventListener('click', removerTarefa);
+//     }
 // }
 
-// soma(40, 50)
+function removerTarefa(evento){
+    const buttonClicado = evento.currentTarget;
+    const tarefaClicada = buttonClicado.closest('li');
 
-// function multiplicacao(parm1, parm2){
-
-//     let resultado  = parm1 * parm2
-//     console.log(resultado)
-// }
-
-// multiplicacao(2, 2)
-
-function verificarMaiorIdade(idade){
-    if(idade >= 18 ){
-    
-        return "Atingiu a maior idade"
-     
-
-    }else{
-
-        return "Ainda não atingiu a maior idade" 
-
-    }
+    tarefaClicada.remove();
 }
 
-// let mensagem  = ""
-// mensagem = verificarMaiorIdade(18)
-// console.log(mensagem)
+function finalizarTarefa(evento){
+    const buttonClicado = evento.currentTarget;
+    const tarefaClicada = buttonClicado.closest('li');
 
-// mensagem = verificarMaiorIdade(20)
-// console.log(mensagem)
-
-// mensagem = verificarMaiorIdade(17)
-// console.log(mensagem)
-
-
-
-//************************/
-//Tipos de dados ⇒ Objetos/
-//************************/
-
-//ARRAY 
-
-// let produtos = "Arroz, Feijão, Macarrão"
-// console.log(produtos)
-
-// let listaNomes = ["Hudson", "Maria", "Daniel", "Ismael", "Pam", "André"]
-// //console.log(listaNomes)
-
-// let listaTarefa = []
-// function adicionarTarefa(tarefa){
-
-//     listaTarefa.push(tarefa)
-
-// }
-
-// adicionarTarefa("Tarefa 1")
-// adicionarTarefa("Tarefa 2")
-// adicionarTarefa("Tarefa 3")
-// console.log(listaTarefa)
-
-//OBJETOS
-let maria = {
-    nome:   "Maria",
-    cidade: "Curitiba",
-    cpf: 1232139812,
-    telefone: "(99) 9999-999"
+    tarefaClicada.classList.toggle('tarefaFinalizada');
 }
 
-let hudson = {
-    nome:   "Hudson",
-    cidade: "Curitiba",
-    cpf: 1232139812,
-    telefone: "(99) 9999-000"
+const inputNoturno = document.getElementById('inputModonoturno');
+const main = document.querySelector('main');
+
+inputNoturno.addEventListener('click', ativarModoNoturno);
+
+function ativarModoNoturno(){
+    main.classList.toggle('modoNoturno');
 }
-
-//console.log(hudson.nome)
-
-//************************/
-//Estrutura de repetição  /
-//************************/
-
-//for(variavel controle ; condição de parada ; incremento){
-
-//}
-
-let listaNomes = ["Hudson", "Maria", "Daniel", "Ismael", "Pam", "André"]
-
-
-for(let i = 0; i < listaNomes.length; i += 1){
-
-    console.log(listaNomes[i])
-
-}
-
-
-
-
-
-

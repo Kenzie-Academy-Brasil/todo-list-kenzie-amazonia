@@ -2,6 +2,9 @@ main{
     display: flex;
     justify-content: center;
 }
+main.modoNoturno{
+    background-color: red;
+}
 
 /* APP LISTA DE TAREFAS */
 section{
@@ -69,7 +72,16 @@ header p{
     margin-bottom: 5px;
 }
 .listaTarefas h2{}
-.listaTarefas div{}
+
+.listaTarefas li.tarefaFinalizada h2{
+    text-decoration: line-through;
+    font-style: italic;
+    opacity: .6;
+}
+.listaTarefas div{
+    display: flex;
+    align-items: center;
+}
 .listaTarefas button{
     font-family: 'Quicksand', sans-serif;
     background-color: transparent;
@@ -85,9 +97,19 @@ header p{
     height: 22px;
 }
 
+.listaTarefas li.tarefaFinalizada .botaoFinalizarTarefa{
+    background-image: url(../img/check.svg);
+}
+
 /* MODO NOTURNO */
 .modoNoturno{
     padding: 15px 60px 40px;
 }
 .modoNoturno label{}
 .modoNoturno input{}
+
+/* h4{
+    width: 200px;
+    height: 50px;
+    background-color: red;
+} */

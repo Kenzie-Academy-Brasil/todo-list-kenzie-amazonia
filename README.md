@@ -12,6 +12,7 @@ Projeto desenvolvido para o evento Kenzie Amazônia.
 
 1. [Aula 1: Introdução ao HTML e estruturação do projeto](https://kenzieacademybr.notion.site/Checkpoint-7e3482456328407ba7c3ba73e511d86e)
 2. [Aula 2: Introdução ao CSS e estilização do projeto](https://kenzieacademybr.notion.site/Checkpoint-d204c8f2f3724c24bcc8f4e67f952117)
+3. [Aula 3: Introdução ao Javascript](https://kenzieacademybr.notion.site/Checkpoint-ee21fc3ea6804c8a896a4d256c76a41f)
 
 ## O projeto
 
